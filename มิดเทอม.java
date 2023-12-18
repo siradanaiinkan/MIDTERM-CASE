@@ -1,8 +1,9 @@
+package QuizOneJunit;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestJunit {
+public class TestJunitTest {
 
     private QuizOneJunit obj;
 
@@ -12,16 +13,19 @@ public class TestJunit {
     }
 
     @Test
-    public void testCountLetterA() {
+    public void testCountLetterA1() {
         assertEquals(2, obj.countLetterA("sasdas"));
+    }
+    @Test
+    public void testCountLetterA23() {
         assertEquals(0, obj.countLetterA("hosix"));
         assertEquals(0, obj.countLetterA(""));
     }
 
     @Test
     public void testCheckTwoLetter() {
-        assertTrue(obj.checkTwoLetter("A"));
+        assertFalse(obj.checkTwoLetter("A"));
         assertTrue(obj.checkTwoLetter("KO"));
-        assertTrue(obj.checkTwoLetter("noxc"));
+        assertFalse(obj.checkTwoLetter("noxc"));
     }
-}
+} 
